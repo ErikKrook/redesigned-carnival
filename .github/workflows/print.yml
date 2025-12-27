@@ -1,18 +1,15 @@
-name: print
+name: Print
 
 on:
   push:
 
-env:
-  APP_NAME: "hello"
-
 jobs:
-  message:
+  print:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Print (shell expansion)
-        run: echo "App Name: $APP_NAME"
-      - name: Print (Actions expression)
-        run: echo "App Name: ${{ env.APP_NAME }}"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "App Name: hello"
