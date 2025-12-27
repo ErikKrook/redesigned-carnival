@@ -7,13 +7,12 @@ jobs:
     name: Print Message
     runs-on: ubuntu-latest
 
-  env:
-    APP_NAME: ${{ vars.APP_NAME }}
+    env:
+      APP_NAME: ${{ vars.APP_NAME }}
 
-  steps:
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-    - name: Checkout Repo
-      uses: actions/checkout@v4
-
-    - name: Display
-      run: echo "App Name: $APP_NAME"
+      - name: Display
+        run: echo "App Name: $APP_NAME"
