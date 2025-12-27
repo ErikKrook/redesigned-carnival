@@ -7,7 +7,7 @@ jobs:
   message:
     runs-on: ubuntu-latest
     env:
-      APP_NAME: ${{ vars.APP_NAME }}
+      APP_NAME: "hello"
 
     steps:
       - uses: actions/checkout@v4
