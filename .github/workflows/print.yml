@@ -5,4 +5,5 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "App Name:hello"
+      - run: |
+        echo "App Name - hello"
