@@ -4,8 +4,11 @@ on: push
 jobs:
   print:
     runs-on: ubuntu-latest
+    env:
+      APP_NAME: ${{ vars.APP_NAME }}
     steps:
       - uses: actions/checkout@v4
       - run: |
-          echo "App Name: hello"
+          echo "App Name: $APP_NAME"
+
 
