@@ -11,11 +11,12 @@ jobs:
         run: |
           echo "App Name: $APP_NAME" > info.txt
       - name: Upload artifact
-        uses: actions/checkout@v4
+        uses: actions/upload-artifact@v4
         with:
           name: app-info
           path: info.txt
         
+
 
 
 
