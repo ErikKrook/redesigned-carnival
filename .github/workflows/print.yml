@@ -7,8 +7,15 @@ jobs:
     env:
       APP_NAME: ${{ vars.APP_NAME }}
     steps:
-      - uses: actions/checkout@v4
-      - run: |
-          echo "App Name: $APP_NAME"
+      - name: Create text file
+        run: |
+          echo "App Name: $APP_NAME" > info.txt
+      - name: Upload artifact
+        uses: actions/checkout@v4
+        with:
+          name: app-info
+          path: info.txt
+        
+
 
 
